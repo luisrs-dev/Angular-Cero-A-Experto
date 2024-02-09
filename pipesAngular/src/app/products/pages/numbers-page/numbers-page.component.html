@@ -1,0 +1,38 @@
+<p-panel header="Pipes Numéricos" class="p-1">
+  <h1>Pipes básicos</h1>
+  <p>Pipes incluidos en Angular - Usualmente en el common module</p>
+
+</p-panel>
+
+<div class="grid mt-2">
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Netas" subheader="del presente año">
+      <!-- De 0 a 6 decimales {{ totalSells | number:'1.0-6' }}  -->
+      <!-- De 6 a 6 decimales, si tiene menos rellena con cero
+         {{ totalSells | number:'1.6-6' }}
+      -->
+       {{ totalSells | number:'1.6-6' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año">
+      <!-- {{ totalSells | currency:'CLP':'symbol-narrow' }} -->
+      {{ totalSells | currency:'':'symbol-narrow' }}
+      <!-- {{ totalSells | currency:'CLP' }} -->
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ganancia porcentual" subheader="del presente año">
+      <!-- Redondea el valor a entero {{ percent | percent }} -->
+      {{ percent | percent:'1.2-2' }}
+    </p-card>
+  </div>
+
+  <!-- Fuente del curso
+  https://www.udemy.com/course/angular-fernando-herrera/learn/lecture/23893168#reviews
+ -->
+
+</div>

@@ -1,0 +1,15 @@
+<h1>Ddz Personajes</h1>
+
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- [] Llaves cuadradas se usan para enviar atributos -->
+    <dbz-list [characterList]="characters"
+              (onDeleteListComponent)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+  <div class="col">
+    <!-- () Paréntesis  se usan para enviar eventos -->
+    <dbz-add-character (onNewCharacterHijo)="onNewCharacter($event)" ></dbz-add-character>
+  </div>
+</div>
